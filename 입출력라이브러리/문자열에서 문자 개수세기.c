@@ -7,14 +7,13 @@ int main()
 {
 	char str[100];
 	char ch;
-	int length=0,count=0;
+	int count=0;
 
 	printf("문자열을 입력해주세요: ");
-	gets_s(str);
+	gets_s(str,sizeof(str));
 	printf("개수를 셀 문자를 입력해주세요: ");
 	ch = getchar();
-	length = strlen(str);
-	for (int i = 0; i < length; i++)
+	for (int i = 0; i < strlen(str); i++)
 	{
 		if (str[i] == ch)
 			count++;
